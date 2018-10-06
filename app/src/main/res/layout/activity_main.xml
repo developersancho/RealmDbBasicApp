@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/personNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Adınızı giriniz.." />
+
+        <EditText
+            android:id="@+id/personSurnameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Soyadınızı giriniz.." />
+
+        <EditText
+            android:id="@+id/personDepartmentEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bölümünüzü giriniz.." />
+
+        <EditText
+            android:id="@+id/personAgeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yaşınızı giriniz.."
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/addBttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addPerson"
+                android:text="Kaydet" />
+
+            <Button
+                android:id="@+id/dismissBttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="dissmisChange"
+                android:text="Vazgeç"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topLayout"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recylerview_item" />
+
+
+</RelativeLayout>
